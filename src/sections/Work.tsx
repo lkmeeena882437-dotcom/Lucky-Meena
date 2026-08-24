@@ -2,24 +2,22 @@ import { BackgroundEnvironment } from '../components/BackgroundEnvironment';
 import { Icon } from '../components/Icons';
 import { ProjectVisual } from '../components/ProjectVisual';
 import { Reveal, SectionHeading } from '../components/Reveal';
-import { projects } from '../data/portfolio';
+import { work } from '../data/portfolio';
 
 export function Work() {
   return <section className="work-section section" id="work" aria-labelledby="work-heading">
     <BackgroundEnvironment variant="violet"/>
-    <div className="outlined-number" aria-hidden="true">03</div>
     <div className="page-shell">
-      <SectionHeading number="03" eyebrow="Featured work" title="Selected work. Built to look good" accent="and work better." description="The visual systems below are handcrafted interface illustrations—not AI-generated images. Replace each clearly marked slot with verified project content when available." dark/>
+      <SectionHeading number="03" eyebrow="Selected work" title="Shipped work. Focused prototypes." accent="Built with purpose." description="One live project and two product demonstrations, labelled clearly." dark/>
       <div className="project-list">
-        {projects.map((project, index) => <Reveal className={`project-card project-${project.accent} ${index % 2 ? 'project-reverse' : ''}`} key={project.id}>
-          <div className="project-media"><ProjectVisual type={project.id}/><span className="project-status mono"><i/>{project.status}</span></div>
+        {work.map((project,index)=><Reveal className={`project-card project-${project.accent}`} key={project.id} delay={index*.05}>
+          <div className="project-media"><ProjectVisual type={project.id}/><span className="project-proof mono"><i/>{project.proof}</span></div>
           <div className="project-copy">
-            <div className="project-heading"><span className="project-index mono">{project.index}</span><p className="mono">{project.category}</p></div>
+            <p className="project-eyebrow mono">{project.eyebrow}</p>
             <h3>{project.title}</h3>
-            <div className="project-detail"><small className="mono">CHALLENGE</small><p>{project.challenge}</p></div>
-            <div className="project-detail"><small className="mono">SOLUTION FORMAT</small><p>{project.solution}</p></div>
-            <div className="project-meta"><div><small className="mono">ROLE</small><strong>{project.role}</strong></div><div><small className="mono">TOOLS</small><span>{project.tools.join(' · ')}</span></div></div>
-            <div className="project-links"><span className="project-placeholder-link">Add live website <Icon name="arrow"/></span><span className="project-placeholder-link">Add case study <Icon name="arrow"/></span></div>
+            <p className="project-description">{project.description}</p>
+            <div className="project-info"><span><small className="mono">ROLE</small>{project.role}</span><span><small className="mono">TOOLS</small>{project.tools.join(' · ')}</span></div>
+            {project.link ? <a className="project-link" href={project.link} target="_blank" rel="noreferrer">{project.linkLabel}<Icon name="arrow"/></a> : <span className="prototype-note"><Icon name="spark"/>Designed as an in-portfolio systems demo</span>}
           </div>
         </Reveal>)}
       </div>

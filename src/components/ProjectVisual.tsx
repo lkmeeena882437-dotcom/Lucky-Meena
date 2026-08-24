@@ -11,14 +11,6 @@ export function ProjectVisual({ type }: { type: string }) {
       </div>
     </div>
   );
-  if (type === 'advertising') return (
-    <div className="project-art art-advertising" aria-hidden="true">
-      <div className="funnel-ring ring-1"/><div className="funnel-ring ring-2"/>
-      <div className="ad-phone"><div className="phone-top"/><div className="ad-card"><small>PLACEMENT 04</small><strong>Right audience.<br/>Clear next step.</strong><span/></div><div className="phone-stats"><i/><i/><i/></div></div>
-      <div className="float-metric metric-a"><small>PATH</small><strong>01 → 04</strong></div>
-      <div className="float-metric metric-b"><small>SIGNAL</small><svg viewBox="0 0 80 25"><path d="M2 21C16 20 16 11 28 15s15-9 25-5 13-6 25-8"/></svg></div>
-    </div>
-  );
   if (type === 'automation') return (
     <div className="project-art art-automation" aria-hidden="true">
       <svg className="flow-lines" viewBox="0 0 600 380"><path d="M110 190h84c35 0 26-86 74-86h65c47 0 39 86 83 86h77"/><path d="M194 190h74c42 0 32 88 78 88h70"/></svg>
@@ -32,7 +24,7 @@ export function ProjectVisual({ type }: { type: string }) {
   return (
     <div className="project-art art-web" aria-hidden="true">
       <div className="web-window window-back"><div/><span/><span/><i/></div>
-      <div className="web-window window-front"><div className="window-nav"><i/><span/><span/><span/></div><div className="window-copy"><small>DIGITAL EXPERIENCE</small><strong>Make the value<br/>feel obvious.</strong><span/><button/></div><div className="window-orb"/></div>
+      <div className="web-window window-front"><div className="window-nav"><i/><span/><span/><span/></div><div className="window-copy"><small>DIGITAL EXPERIENCE</small><strong>Make the value feel obvious.</strong><span/><button/></div><div className="window-orb"/></div>
       <div className="responsive-phone"><i/><span/><b/></div>
     </div>
   );

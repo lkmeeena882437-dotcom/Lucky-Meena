@@ -1,35 +1,26 @@
 import { BackgroundEnvironment } from '../components/BackgroundEnvironment';
-import { Reveal, SectionHeading } from '../components/Reveal';
-import { Sticker } from '../components/Sticker';
 import { Icon } from '../components/Icons';
+import { Reveal, SectionHeading } from '../components/Reveal';
 import { personal } from '../data/portfolio';
 
 export function About() {
   return <section className="about-section section" id="about" aria-labelledby="about-heading">
     <BackgroundEnvironment variant="pearl"/>
-    <div className="outlined-number" aria-hidden="true">01</div>
     <div className="page-shell">
-      <SectionHeading number="01" eyebrow="About the practice" title="More than a portfolio." accent="This is how I think and create." description="A connected approach for digital brands that need strategy and execution to move in the same direction."/>
+      <SectionHeading number="01" eyebrow="About" title="One person. Connected thinking." accent="Less handoff, more clarity."/>
       <div className="about-grid">
-        <Reveal className="about-visual">
-          <div className="profile-system">
-            <div className="profile-grid"/>
-            <div className="profile-monogram">LM<span>लक्की मीणा</span></div>
-            <div className="profile-orbit orbit-a"/><div className="profile-orbit orbit-b"/>
-            <div className="profile-chip chip-location"><Icon name="location"/><span>{personal.location}</span></div>
-            <div className="profile-chip chip-availability"><i/><span>Currently available</span></div>
-            <div className="about-sticker"><Sticker icon="layers" color="violet" size="medium"/></div>
-          </div>
+        <Reveal className="identity-card">
+          <div className="identity-top"><span className="identity-mark">LM</span><span className="identity-status"><i/>Open to work</span></div>
+          <div className="identity-copy"><p className="mono">INTRODUCTION</p><h3>{personal.name}</h3><span>{personal.nativeName}</span><strong>{personal.role}</strong></div>
+          <div className="identity-bottom"><span><Icon name="location"/>{personal.location}</span><small className="mono">BASED IN INDIA · WORKING REMOTELY</small></div>
+          <div className="identity-rings" aria-hidden="true"><i/><i/><i/></div>
         </Reveal>
-        <div className="about-content">
-          <Reveal><p className="about-lead">I connect the parts that usually get handed between specialists: the message, the interface, the workflow and the growth system behind it.</p></Reveal>
-          <Reveal delay={.06}><p className="about-body">My focus is simple: make the offer easier to understand, the operation easier to run and the digital experience easier to trust. That can mean structuring a Telegram community, planning acquisition, automating a manual process or building the website that brings it all together.</p></Reveal>
-          <Reveal className="about-note" delay={.12}><Icon name="check"/><p><strong>Honest by design.</strong> This portfolio intentionally avoids invented client names, testimonials and performance numbers. Verified work can replace the marked project slots.</p></Reveal>
-          <div className="highlight-grid">
-            <Reveal className="highlight-card" delay={.12}><strong>05</strong><span>connected core<br/>capabilities</span></Reveal>
-            <Reveal className="highlight-card" delay={.16}><strong>01</strong><span>accountable<br/>operator</span></Reveal>
-            <Reveal className="highlight-card" delay={.2}><strong>100%</strong><span>responsive-first<br/>thinking</span></Reveal>
-            <Reveal className="highlight-card" delay={.24}><strong>∞</strong><span>remote-ready<br/>collaboration</span></Reveal>
+        <div className="about-copy">
+          <Reveal><p className="about-lead">I turn messy digital operations into clear, useful systems.</p></Reveal>
+          <Reveal delay={.05}><p>From Telegram communities and paid growth to AI workflows and fast websites, I connect strategy with execution—so the work moves forward without five different handoffs.</p></Reveal>
+          <Reveal className="about-principle" delay={.1}><span className="mono">HOW I WORK</span><strong>Understand the problem. Build only what helps. Keep the result easy to run.</strong></Reveal>
+          <div className="about-focus">
+            {['Community','Acquisition','Automation','Web'].map((item,index)=><Reveal key={item} delay={.1 + index*.04}><span className="mono">0{index+1}</span><strong>{item}</strong></Reveal>)}
           </div>
         </div>
       </div>
