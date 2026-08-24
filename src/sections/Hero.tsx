@@ -1,5 +1,5 @@
 import { motion,useReducedMotion } from 'framer-motion';
-import { BackgroundEnvironment } from '../components/BackgroundEnvironment';
+import { HeroVideoBackground } from '../components/HeroVideoBackground';
 import { Button } from '../components/Button';
 import { HeroMonogram } from '../components/HeroMonogram';
 import { Icon } from '../components/Icons';
@@ -9,7 +9,7 @@ const trust=['Telegram Management','AI Automation','Crypto','Development','Ads',
 
 export function Hero(){
   const reduce=useReducedMotion();const item={hidden:{opacity:0,y:20},show:{opacity:1,y:0}};
-  return <section className="hero-section" id="home" aria-labelledby="hero-title"><BackgroundEnvironment variant="cosmic"/><div className="hero-grid page-shell">
+  return <section className="hero-section" id="home" aria-labelledby="hero-title"><HeroVideoBackground/><div className="hero-grid page-shell">
     <motion.div className="hero-copy" initial={reduce?false:'hidden'} animate="show" variants={{hidden:{},show:{transition:{staggerChildren:.07}}}}>
       <motion.div className="availability-label" variants={item}><i/><span>{personal.availability}</span></motion.div>
       <motion.p className="hero-role mono" variants={item}>DIGITAL BUILDER · COMMUNITY · AUTOMATION</motion.p>
