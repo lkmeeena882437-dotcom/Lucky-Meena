@@ -1,6 +1,6 @@
-# Lucky Meena — Portfolio
+# Lucky Meena — Premium Portfolio
 
-A premium, responsive single-page portfolio for **Lucky Meena (लक्की मीणा)**, focused on Telegram growth, advertising, AI automation, crypto operations, and conversion web design.
+A production-ready single-page React portfolio for **Lucky Meena (लक्की मीणा)** with a dark cosmic hero, pearl glass surfaces, custom SVG artwork, semantic section atmospheres, and conversion-focused project/contact flows.
 
 ## Run locally
 
@@ -9,22 +9,44 @@ npm install
 npm run dev
 ```
 
-Create a production build with:
+Validation and production build:
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
 ## Stack
 
-- HTML5
-- Tailwind CSS v4
-- Vanilla JavaScript
+- React 19 + TypeScript
 - Vite
-- Self-hosted DM Sans and Cormorant Garamond fonts
+- Tailwind CSS v4
+- Framer Motion
+- Lenis desktop smooth scrolling
+- Handcrafted inline SVG and CSS visuals
+- Self-hosted Bricolage Grotesque, Inter, and JetBrains Mono fonts
 
-## Content configuration
+Three.js was intentionally not added: the custom SVG/CSS monogram delivers the desired depth with a much smaller performance cost and keeps the main content independent of WebGL.
 
-The public Telegram username is defined once as `TELEGRAM_USERNAME` in `src/main.js`. Static Telegram links also appear in `index.html`; update both if the handle changes.
+## Edit personal content
 
-The case-study figures are presented as system scope and delivery standards rather than unverified revenue claims. Private client proof is offered through the performance walkthrough CTA.
+Most editable content is centralised in:
+
+```text
+src/data/portfolio.ts
+```
+
+Update:
+
+- Email, WhatsApp, and Telegram
+- LinkedIn and resume URLs
+- Contact form endpoint
+- Verified project details and links
+- Experience, education, and certifications
+- Role, location, tagline, tools, and services
+
+The contact form supports a real POST endpoint when `contactEndpoint` is supplied. Until then, it honestly runs in demo mode and copies a validated inquiry to the visitor's clipboard rather than pretending to submit it.
+
+## Visual assets
+
+No AI-generated portfolio imagery is used. Project visuals, the hero monogram, favicon, and social card are handcrafted SVG/CSS compositions. Replace project slots only with verified project screenshots or case-study media.
