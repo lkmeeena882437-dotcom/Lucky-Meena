@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { HeroVideoBackground } from '../components/HeroVideoBackground';
+import { BackgroundEnvironment } from '../components/BackgroundEnvironment';
 import { Button } from '../components/Button';
 import { HeroMonogram } from '../components/HeroMonogram';
 import { Icon } from '../components/Icons';
@@ -9,28 +9,32 @@ const trust = ['Telegram Management', 'AI Automation', 'Crypto', 'Development', 
 
 export function Hero() {
   const reduce = useReducedMotion();
-  const item = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
+  const item = { hidden: { opacity: 0 }, show: { opacity: 1 } };
 
   return (
     <section className="hero-section" id="home" aria-labelledby="hero-title">
-      <HeroVideoBackground />
+      <BackgroundEnvironment variant="pearl" />
       <div className="hero-grid page-shell">
         <motion.div
           className="hero-copy"
           initial={reduce ? false : 'hidden'}
           animate="show"
-          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.07 } } }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
         >
+          <motion.div className="hero-visual-wrap" variants={item}>
+            <HeroMonogram />
+          </motion.div>
           <motion.div className="availability-label" variants={item}>
             <i />
             <span>{personal.availability}</span>
           </motion.div>
           <motion.p className="hero-role mono" variants={item}>
-            DIGITAL BUILDER · COMMUNITY · AUTOMATION
+            Digital builder · Community · Automation
           </motion.p>
           <motion.h1 id="hero-title" variants={item}>
-            Building, Managing & <span>Automating Digital Growth.</span>
+            Building, managing & <span>automating digital growth.</span>
           </motion.h1>
+          <motion.i className="hero-rule" variants={item} />
           <motion.p className="hero-description" variants={item}>
             I&apos;m Lucky—a digital builder working across Telegram communities, AI content automation, crypto ecosystems, paid advertising, landing pages and development.
           </motion.p>
@@ -39,7 +43,7 @@ export function Hero() {
           </motion.p>
           <motion.div className="hero-actions" variants={item}>
             <Button href={personal.telegramUrl || '#contact'}>Work With Me</Button>
-            <Button href="#work" variant="secondary">View My Work ↓</Button>
+            <Button href="#work" variant="secondary">View My Work</Button>
           </motion.div>
           <motion.div className="hero-meta" variants={item}>
             <div>
@@ -53,18 +57,10 @@ export function Hero() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="hero-visual-wrap"
-          initial={reduce ? false : { opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <HeroMonogram />
-        </motion.div>
-        <motion.div
           className="trust-strip"
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.55 }}
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
         >
           {trust.map((label, index) => (
             <span key={label}>

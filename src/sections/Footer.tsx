@@ -23,7 +23,7 @@ export function Footer() {
             <strong>LUCKY</strong>
             <span>Digital Builder · Community Manager · AI Automation</span>
           </div>
-          <a className="footer-top magnetic" href="#home">
+          <a className="footer-top" href="#home">
             Back to top <Icon name="arrow" />
           </a>
         </div>

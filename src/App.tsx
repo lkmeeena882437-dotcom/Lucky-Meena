@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
 import { Navbar } from './components/Navbar';
-import { CustomCursor } from './components/Cursor';
 import { MobileStickyCTA } from './components/MobileStickyCTA';
 import { Hero } from './sections/Hero';
 import { About } from './sections/About';
@@ -14,11 +13,10 @@ import { Footer } from './sections/Footer';
 
 function App() {
   useEffect(() => {
-    const desktop = window.matchMedia('(hover: hover) and (pointer: fine)');
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (!desktop.matches || reduced.matches) return;
+    if (reduced.matches) return;
 
-    const lenis = new Lenis({ lerp: 0.09, smoothWheel: true, anchors: { offset: -76 } });
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: { offset: -88 } });
     let frame = 0;
     const raf = (time: number) => {
       lenis.raf(time);
@@ -32,37 +30,9 @@ function App() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-    const move = (event: PointerEvent) => {
-      const target = (event.target as HTMLElement).closest<HTMLElement>('.magnetic');
-      if (!target) return;
-      const rect = target.getBoundingClientRect();
-      target.style.setProperty('--mag-x', `${(event.clientX - rect.left - rect.width / 2) * 0.08}px`);
-      target.style.setProperty('--mag-y', `${(event.clientY - rect.top - rect.height / 2) * 0.08}px`);
-    };
-
-    const reset = (event: PointerEvent) => {
-      const target = (event.target as HTMLElement).closest<HTMLElement>('.magnetic');
-      if (target) {
-        target.style.setProperty('--mag-x', '0px');
-        target.style.setProperty('--mag-y', '0px');
-      }
-    };
-
-    document.addEventListener('pointermove', move);
-    document.addEventListener('pointerout', reset);
-    return () => {
-      document.removeEventListener('pointermove', move);
-      document.removeEventListener('pointerout', reset);
-    };
-  }, []);
-
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      <CustomCursor />
       <Navbar />
       <main id="main">
         <Hero />

@@ -2,6 +2,8 @@
 
 A production-ready single-page portfolio for **Lucky Meena (लक्की मीणा)** covering Telegram management, AI content automation, crypto operations, Telegram ads, landing pages and development.
 
+The visual language is an editorial serif system: Playfair Display headlines, Source Sans 3 body copy, IBM Plex Mono labels, ivory surfaces and a single burnished-gold accent.
+
 ## Run and validate
 
 ```bash
@@ -18,13 +20,13 @@ npm run build
 - Framer Motion
 - Lenis desktop smooth scrolling
 - Handcrafted inline SVG/CSS visuals
-- Self-hosted Bricolage Grotesque, Inter and JetBrains Mono
+- Self-hosted Playfair Display, Source Sans 3 and IBM Plex Mono
 
-No stock or AI-generated portfolio imagery is used. The identity sculpture and project interfaces are vector/CSS-based, so they remain sharp on high-density and 4K displays.
+No stock or AI-generated portfolio imagery is used. The identity mark and project interfaces are vector/CSS-based, so they remain sharp on high-density and 4K displays.
 
 ## Website structure
 
-1. Hero with cinematic background and trust strip
+1. Hero with editorial headline and trust strip
 2. Personal brand introduction
 3. Six-part digital skill stack
 4. Five-step learning and building journey

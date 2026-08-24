@@ -39,7 +39,7 @@ export function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <nav className="nav-inner" aria-label="Main navigation">
-        <BrandLogo light />
+        <BrandLogo />
         <div className="desktop-nav">
           {navItems.map((item) => (
             <a className={active === item.href.slice(1) ? 'active' : ''} href={item.href} key={item.href}>
@@ -47,7 +47,7 @@ export function Navbar() {
             </a>
           ))}
         </div>
-        <a className="nav-cta magnetic" href="#contact">
+        <a className="nav-cta" href="#contact">
           <span>Let&apos;s talk</span>
           <Icon name="arrow" />
         </a>
@@ -67,10 +67,10 @@ export function Navbar() {
           <motion.div
             id="mobile-navigation"
             className="mobile-navigation"
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
           >
             {navItems.map((item, index) => (
               <a href={item.href} key={item.href} onClick={() => setOpen(false)}>

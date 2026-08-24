@@ -59,25 +59,25 @@ export function Contact() {
           <p>Telegram community, AI automation, crypto project, advertising campaign, landing page or a new digital idea—let&apos;s talk.</p>
           <div className="contact-actions">
             {personal.telegramUrl && (
-              <a className="contact-button telegram magnetic" href={personal.telegramUrl}>
+              <a className="contact-button telegram" href={personal.telegramUrl}>
                 <Icon name="message" />
                 <span>Talk on Telegram</span>
                 <small>{personal.telegram || 'Open chat'}</small>
               </a>
             )}
             {personal.emailUrl && (
-              <a className="contact-button email magnetic" href={personal.emailUrl}>
+              <a className="contact-button email" href={personal.emailUrl}>
                 <Icon name="mail" />
                 <span>Send me an email</span>
                 <small>{personal.email || 'Write email'}</small>
               </a>
             )}
-            <a className="contact-button github magnetic" href={personal.githubUrl} target="_blank" rel="noreferrer">
+            <a className="contact-button github" href={personal.githubUrl} target="_blank" rel="noreferrer">
               <Icon name="github" />
               <span>Connect on GitHub</span>
               <small>@lkmeeena882437-dotcom</small>
             </a>
-            <a className="contact-button inquiry magnetic" href="#inquiry">
+            <a className="contact-button inquiry" href="#inquiry">
               <Icon name="spark" />
               <span>Send a project note</span>
               <small>Use the form</small>
@@ -107,7 +107,7 @@ export function Contact() {
               Website
               <input name="website" tabIndex={-1} autoComplete="off" />
             </label>
-            <button className="form-submit magnetic" type="submit" disabled={status === 'loading'}>
+            <button className="form-submit" type="submit" disabled={status === 'loading'}>
               <span>{status === 'loading' ? 'Preparing…' : 'Send project note'}</span>
               {status === 'loading' ? <i className="loader" /> : <Icon name="arrow" />}
             </button>

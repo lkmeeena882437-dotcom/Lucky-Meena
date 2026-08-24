@@ -10,10 +10,13 @@ type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function Button({ children, variant = 'primary', icon = true, className = '', disabledVisual = false, ...props }: ButtonProps) {
   return (
-    <a className={`button button-${variant} magnetic ${disabledVisual ? 'is-placeholder' : ''} ${className}`} {...props} aria-disabled={disabledVisual || undefined}>
+    <a className={`button button-${variant} ${disabledVisual ? 'is-placeholder' : ''} ${className}`} {...props} aria-disabled={disabledVisual || undefined}>
       <span>{children}</span>
-      {icon && <span className="button-icon"><Icon name="arrow" /></span>}
-      <i className="button-shine" aria-hidden="true" />
+      {icon && (
+        <span className="button-icon">
+          <Icon name="arrow" />
+        </span>
+      )}
     </a>
   );
 }

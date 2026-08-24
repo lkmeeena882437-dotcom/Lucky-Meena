@@ -20,7 +20,6 @@ export function Work() {
           title="Work explained as"
           accent="systems, not thumbnails."
           description="Open a project to review the role, focus and skills behind it."
-          dark
         />
         <div className="case-layout">
           <div className="case-list">
