@@ -1,17 +1,12 @@
 # Lucky Meena — Personal Portfolio
 
-A focused single-page React portfolio for **Lucky Meena (लक्की मीणा)**. The site uses a dark cosmic hero, crisp vector visuals and compact pearl-glass sections without stock or AI-generated imagery.
+A production-ready single-page portfolio for **Lucky Meena (लक्की मीणा)** covering Telegram management, AI content automation, crypto operations, Telegram ads, landing pages and development.
 
-## Run locally
+## Run and validate
 
 ```bash
 npm install
 npm run dev
-```
-
-Validation and production build:
-
-```bash
 npm run typecheck
 npm run build
 ```
@@ -21,23 +16,25 @@ npm run build
 - React 19 + TypeScript
 - Vite + Tailwind CSS v4
 - Framer Motion
-- Lenis smooth scrolling on fine-pointer desktop devices
-- Handcrafted inline SVG and CSS project visuals
+- Lenis desktop smooth scrolling
+- Handcrafted inline SVG/CSS visuals
 - Self-hosted Bricolage Grotesque, Inter and JetBrains Mono
 
-Three.js is intentionally omitted. The vector monogram provides sharp, scalable depth without adding WebGL cost or making core content depend on a canvas.
+No stock or AI-generated portfolio imagery is used. The identity sculpture and project interfaces are vector/CSS-based, so they remain sharp on high-density and 4K displays.
 
-## Page structure
+## Website structure
 
-1. Focused hero
-2. Personal introduction
-3. Five core capabilities
-4. One real project plus two clearly labelled capability prototypes
-5. Compact contact desk
+1. Hero with direct positioning and trust strip
+2. Personal brand introduction
+3. Six-part digital skill stack
+4. Five-step learning and building journey
+5. Interactive case-study showcase
+6. Honest metrics and working strengths
+7. Full closing CTA with quick inquiry form
 
 ## Edit personal content
 
-All editable content is centralised in:
+All personal and portfolio data lives in:
 
 ```text
 src/data/portfolio.ts
@@ -45,9 +42,11 @@ src/data/portfolio.ts
 
 Before publishing, replace:
 
-- Email, WhatsApp and Telegram
-- LinkedIn and resume URLs if needed
+- Telegram handle and URL
+- Email address and mailto URL
+- WhatsApp number
+- LinkedIn, Instagram, X and resume links
 - Contact form endpoint
-- Prototype cards with verified client work when available
+- `[ADD]` project and experiment counts with verified numbers
 
-The current portfolio itself is listed as a real shipped project. The other two cards are explicitly labelled as prototypes, not client work. With no contact endpoint configured, the form copies a validated inquiry instead of pretending to submit it.
+The contact form supports a real POST endpoint when `contactEndpoint` is provided. Until then, it copies a validated inquiry instead of pretending to submit it.

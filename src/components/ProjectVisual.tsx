@@ -11,6 +11,22 @@ export function ProjectVisual({ type }: { type: string }) {
       </div>
     </div>
   );
+  if (type === 'advertising') return (
+    <div className="project-art art-advertising" aria-hidden="true">
+      <div className="ad-radar"><i/><i/><i/></div>
+      <div className="ad-phone"><span className="ad-notch"/><small>TELEGRAM CAMPAIGN</small><strong>Audience fit<br/>before reach.</strong><div className="ad-bars"><i/><i/><i/><i/></div></div>
+      <div className="ad-float ad-float-a"><small>CHANNELS</small><strong>Research</strong></div>
+      <div className="ad-float ad-float-b"><small>CAMPAIGN</small><strong>Monitor</strong></div>
+    </div>
+  );
+  if (type === 'experiments') return (
+    <div className="project-art art-experiments" aria-hidden="true">
+      <div className="experiment-grid">
+        <div><span>01</span><strong>WEB</strong><i/></div><div><span>02</span><strong>AI</strong><i/></div><div><span>03</span><strong>BOTS</strong><i/></div><div><span>04</span><strong>TOOLS</strong><i/></div>
+      </div>
+      <div className="experiment-core">LM<small>BUILD / TEST / LEARN</small></div>
+    </div>
+  );
   if (type === 'automation') return (
     <div className="project-art art-automation" aria-hidden="true">
       <svg className="flow-lines" viewBox="0 0 600 380"><path d="M110 190h84c35 0 26-86 74-86h65c47 0 39 86 83 86h77"/><path d="M194 190h74c42 0 32 88 78 88h70"/></svg>
