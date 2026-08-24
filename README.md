@@ -24,13 +24,13 @@ No stock or AI-generated portfolio imagery is used. The identity sculpture and p
 
 ## Website structure
 
-1. Hero with direct positioning and trust strip
+1. Hero with cinematic background and trust strip
 2. Personal brand introduction
 3. Six-part digital skill stack
 4. Five-step learning and building journey
 5. Interactive case-study showcase
 6. Honest metrics and working strengths
-7. Full closing CTA with quick inquiry form
+7. Closing CTA with inquiry form
 
 ## Edit personal content
 
@@ -40,13 +40,12 @@ All personal and portfolio data lives in:
 src/data/portfolio.ts
 ```
 
-Before publishing, replace:
+Optional fields you can add later:
 
 - Telegram handle and URL
 - Email address and mailto URL
 - WhatsApp number
 - LinkedIn, Instagram, X and resume links
 - Contact form endpoint
-- `[ADD]` project and experiment counts with verified numbers
 
 The contact form supports a real POST endpoint when `contactEndpoint` is provided. Until then, it copies a validated inquiry instead of pretending to submit it.
