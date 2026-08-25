@@ -33,13 +33,13 @@ export function Contact() {
         setNotice('Thanks — your message has been sent.');
       } else {
         const text = `Portfolio inquiry for Lucky Meena\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nMessage: ${data.get('message')}`;
-        await navigator.clipboard.writeText(text);
-        setNotice('Message copied. Paste it into GitHub or your preferred channel.');
+        window.location.href = `${personal.emailUrl}?subject=${encodeURIComponent('Project note for Lucky Meena')}&body=${encodeURIComponent(text)}`;
+        setNotice('Opening your email app — or message @adstelo_support on Telegram.');
       }
       setStatus('success');
     } catch {
       setStatus('error');
-      setNotice('Could not prepare the message. Please copy it manually.');
+      setNotice('Could not prepare the message. Email lkmeena8824@gmail.com or Telegram @adstelo_support.');
     }
   };
 
@@ -59,23 +59,19 @@ export function Contact() {
             Have an idea?
             <span>Let&apos;s turn it into something real.</span>
           </h2>
-          <p>Telegram community, AI automation, crypto project, advertising campaign, landing page or a new digital idea—let&apos;s talk.</p>
+          <p>Telegram, a landing page, AdsTele work, or a campaign that needs a real operator — write here or message me directly.</p>
           <div className="contact-actions">
-            {personal.telegramUrl && (
-              <a className="contact-button telegram" href={personal.telegramUrl}>
-                <Icon name="message" />
-                <span>Talk on Telegram</span>
-                <small>{personal.telegram || 'Open chat'}</small>
-              </a>
-            )}
-            {personal.emailUrl && (
-              <a className="contact-button email" href={personal.emailUrl}>
-                <Icon name="mail" />
-                <span>Send me an email</span>
-                <small>{personal.email || 'Write email'}</small>
-              </a>
-            )}
-            <a className="contact-button github" href={personal.githubUrl} target="_blank" rel="noreferrer">
+            <a className="contact-button telegram" href={personal.telegramUrl}>
+              <Icon name="message" />
+              <span>Talk on Telegram</span>
+              <small>{personal.telegram}</small>
+            </a>
+            <a className="contact-button email" href={personal.emailUrl}>
+              <Icon name="mail" />
+              <span>Send me an email</span>
+              <small>{personal.email}</small>
+            </a>
+            <a className="contact-button github" href={personal.githubUrl} target="_blank" rel="noopener noreferrer">
               <Icon name="github" />
               <span>Connect on GitHub</span>
               <small>@lkmeeena882437-dotcom</small>
@@ -86,7 +82,7 @@ export function Contact() {
               <small>Use the form</small>
             </a>
           </div>
-          <small className="open-line mono">OPEN TO COLLABORATIONS · FREELANCE PROJECTS · INTERESTING IDEAS</small>
+          <small className="open-line mono">TELEGRAM @ADSTELO_SUPPORT · LKMEENA8824@GMAIL.COM</small>
         </Reveal>
         <Reveal className="contact-form-wrap" delay={0.06}>
           <form className="contact-form" id="inquiry" onSubmit={submit} noValidate>
@@ -111,7 +107,7 @@ export function Contact() {
               <input name="website" tabIndex={-1} autoComplete="off" />
             </label>
             <button className="form-submit" type="submit" disabled={status === 'loading'}>
-              <span>{status === 'loading' ? 'Preparing…' : 'Send project note'}</span>
+              <span>{status === 'loading' ? 'Preparing…' : 'Email this note'}</span>
               {status === 'loading' ? <i className="loader" /> : <Icon name="arrow" />}
             </button>
             <div className={`form-notice notice-${status}`} role="status" aria-live="polite">

@@ -13,14 +13,14 @@ export function Skills() {
           headingId="services-heading"
           number="02"
           eyebrow="What I do"
-          title="My digital"
-          accent="skill stack."
-          description="Six connected capabilities—from audience to automation to product."
+          title="The work I"
+          accent="actually take."
+          description="Six services, tied to live sites and running campaigns — not a generic stack."
         />
         <div className="services-grid">
           {services.map((service, index) => (
             <Reveal key={service.number} delay={(index % 3) * 0.04}>
-              <TiltCard className={`service-card accent-${service.accent}`}>
+              <TiltCard className={`service-card accent-${service.accent} ${service.featured ? 'is-featured' : ''}`}>
                 <div className="service-head">
                   <span className="mono">{service.number}</span>
                   <i>

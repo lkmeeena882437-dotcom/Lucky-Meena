@@ -31,6 +31,7 @@
   --muted: #f5f3f0;
   --muted-foreground: #6b6b6b;
   --accent: #b8860b;
+  --accent-ink: #7a5a08;
   --accent-secondary: #d4a84b;
   --accent-foreground: #ffffff;
   --accent-muted: rgba(184, 134, 11, 0.06);
@@ -455,7 +456,7 @@ svg {
   align-items: center;
   gap: 10px;
   margin-bottom: 18px;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 500;
@@ -662,7 +663,7 @@ svg {
 
 .section-label p {
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-ink);
   font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 500;
@@ -938,7 +939,7 @@ svg {
 
 .service-card {
   position: relative;
-  min-height: 430px;
+  min-height: 360px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -954,6 +955,10 @@ svg {
   border-color: var(--border-hover);
   background: color-mix(in srgb, var(--muted) 30%, var(--card));
   box-shadow: var(--shadow-md);
+}
+
+.service-card.is-featured {
+  background: var(--accent-muted);
 }
 
 .service-head,
@@ -1002,8 +1007,8 @@ svg {
 
 .service-card ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 14px;
+  grid-template-columns: 1fr;
+  gap: 10px;
   margin: 22px 0;
   padding: 18px 0;
   border-top: 1px solid var(--border);
@@ -1055,6 +1060,12 @@ svg {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.journey-caption {
+  margin: 10px 0 0;
+  color: var(--accent-ink);
+  font-size: 0.72rem;
 }
 
 .journey-intro p {
@@ -1969,7 +1980,7 @@ svg {
 
 .reasons-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
 
@@ -2337,9 +2348,7 @@ svg {
   .portrait-mat img { aspect-ratio: 4 / 5; }
 
   .services-grid,
-  .reasons-grid { grid-template-columns: 1fr 1fr; }
-
-  .reasons-grid { grid-template-columns: repeat(3, 1fr); }
+  .reasons-grid { grid-template-columns: 1fr; }
 
   .case-layout { grid-template-columns: 1fr; }
 
@@ -2431,7 +2440,7 @@ svg {
   .services-grid { grid-template-columns: 1fr; }
 
   .metrics-row,
-  .reasons-grid { grid-template-columns: 1fr 1fr; }
+  .reasons-grid { grid-template-columns: 1fr; }
 
   .metric-card:nth-child(2) { border-right: 0; }
   .metric-card:nth-child(3),

@@ -11,10 +11,10 @@ export function MetricsWhy() {
         <SectionHeading
           headingId="proof-heading"
           number="05"
-          eyebrow="Built through action"
-          title="Experience you can"
-          accent="see in the work."
-          description="A compact snapshot of the systems, skills and domains this portfolio is built around."
+          eyebrow="Plain facts"
+          title="No padded"
+          accent="numbers."
+          description="What is true today: three live sites, six skill areas, based in Kota, open for work."
         />
         <div className="metrics-row">
           {metrics.map((metric, index) => (
@@ -25,8 +25,8 @@ export function MetricsWhy() {
           ))}
         </div>
         <div className="why-heading">
-          <span className="mono">WHY WORK WITH ME</span>
-          <h3>One builder. More context.</h3>
+          <span className="mono">WHY THIS WORKS</span>
+          <h3>One builder. Live proof.</h3>
         </div>
         <div className="reasons-grid">
           {reasons.map((reason, index) => (

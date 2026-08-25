@@ -8,7 +8,7 @@ export function About() {
     <section className="about-section section" id="about" aria-labelledby="about-heading">
       <BackgroundEnvironment variant="pearl" />
       <div className="page-shell">
-        <SectionHeading headingId="about-heading" number="01" eyebrow="Who am I?" title="More than just" accent="one skill." />
+        <SectionHeading headingId="about-heading" number="01" eyebrow="Who am I?" title="Built from" accent="Kota. Shipped live." />
         <div className="about-grid">
           <Reveal className="identity-card">
             <div className="identity-photo">
@@ -16,49 +16,44 @@ export function About() {
             </div>
             <div className="identity-body">
               <div className="identity-top">
-                <span className="identity-mark">LM</span>
                 <span className="identity-status">
                   <i />
                   Open to work
                 </span>
               </div>
               <div className="identity-copy">
-                <p className="mono">INTRODUCTION</p>
                 <h3>{personal.name}</h3>
                 <span>{personal.nativeName}</span>
-                <strong>{personal.role}</strong>
+                <strong>{personal.location}</strong>
               </div>
               <div className="identity-bottom">
                 <span>
-                  <Icon name="location" />
-                  {personal.location}
+                  <Icon name="message" />
+                  {personal.telegram}
                 </span>
-                <small className="mono">BUILDING ACROSS COMMUNITY · AI · WEB</small>
               </div>
             </div>
           </Reveal>
           <div className="about-copy">
             <Reveal>
-              <p className="about-lead">I work at the intersection of community, technology, automation and digital growth.</p>
+              <p className="about-lead">I run AdsTele and I build the pages that catch the traffic.</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <p>I don&apos;t limit myself to one niche. My work spans Telegram communities, AI-powered content workflows, crypto operations, advertising and landing pages for digital businesses.</p>
+              <p>From Kota I handle Telegram communities, landing pages and paid ads as one job — not three vendors. Jiga Bhai VIP, Gujarati Trader X and AdsTele are live. Telegram campaigns are running; screenshots on request.</p>
             </Reveal>
             <Reveal className="about-method" delay={0.08}>
-              <span className="mono">MY APPROACH</span>
+              <span className="mono">HOW I WORK</span>
               <div>
-                <strong>Understand</strong>
+                <strong>Page</strong>
                 <i>→</i>
-                <strong>Build</strong>
+                <strong>Traffic</strong>
                 <i>→</i>
-                <strong>Execute</strong>
-                <i>→</i>
-                <strong>Improve</strong>
+                <strong>Community</strong>
               </div>
             </Reveal>
             <Reveal className="about-statement" delay={0.12}>
               <Icon name="spark" />
-              <strong>I build digital systems that save time, improve growth and turn ideas into execution.</strong>
+              <strong>If the offer is clear, I can build the site and put it in front of people.</strong>
             </Reveal>
           </div>
         </div>

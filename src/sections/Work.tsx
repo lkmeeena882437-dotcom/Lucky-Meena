@@ -17,10 +17,10 @@ export function Work() {
         <SectionHeading
           headingId="work-heading"
           number="04"
-          eyebrow="Selected work & experiments"
-          title="Work explained as"
-          accent="systems, not thumbnails."
-          description="Open a project to review the role, focus and skills behind it."
+          eyebrow="Live work"
+          title="Sites you can"
+          accent="open right now."
+          description="Three live websites and running Telegram ads. No invented case studies."
         />
         <div className="case-layout">
           <div className="case-list">
@@ -31,12 +31,13 @@ export function Work() {
                   type="button"
                   onClick={() => setActive(index)}
                   aria-expanded={active === index}
+                  aria-controls="case-stage"
                 >
                   <span className="mono">{project.number}</span>
                   <div>
                     <small className="mono">{project.category}</small>
                     <strong>{project.title}</strong>
-                    <em>{active === index ? 'Case study open' : 'View case study'}</em>
+                    <em>{project.url ? 'Open live site' : 'Running campaign'}</em>
                   </div>
                   <Icon name={active === index ? 'close' : 'arrow'} />
                 </button>
@@ -48,13 +49,13 @@ export function Work() {
               <motion.article
                 className="case-study"
                 key={current.id}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
               >
                 <div className="case-visual">
-                  <ProjectVisual type={current.id} />
+                  <ProjectVisual type={current.visual} />
                   <span className="case-status mono">
                     <i />
                     {current.status}
@@ -83,13 +84,22 @@ export function Work() {
                       </small>
                     ))}
                   </div>
+                  {current.url ? (
+                    <a className="case-link" href={current.url} target="_blank" rel="noopener noreferrer">
+                      Visit live site <Icon name="arrow" />
+                    </a>
+                  ) : (
+                    <a className="case-link" href={personal.telegramUrl}>
+                      Ask for campaign screenshots <Icon name="arrow" />
+                    </a>
+                  )}
                 </div>
               </motion.article>
             </AnimatePresence>
           </div>
         </div>
         <a className="work-explore" href={personal.githubUrl} target="_blank" rel="noopener noreferrer">
-          Explore projects on GitHub <Icon name="arrow" />
+          Also on GitHub <Icon name="arrow" />
         </a>
       </div>
     </section>

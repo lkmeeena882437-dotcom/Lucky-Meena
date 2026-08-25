@@ -5,7 +5,7 @@ import { Portrait } from '../components/Portrait';
 import { Icon } from '../components/Icons';
 import { personal } from '../data/portfolio';
 
-const trust = ['Telegram Management', 'AI Automation', 'Crypto', 'Development', 'Ads', 'Landing Pages'];
+const trust = ['Telegram', 'Landing pages', 'Meta ads', 'Google ads', 'Communities', 'Live sites'];
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -26,30 +26,27 @@ export function Hero() {
             <span>{personal.availability}</span>
           </motion.div>
           <motion.p className="hero-role mono" variants={item}>
-            Digital builder · Community · Automation
+            Kota · AdsTele · Live websites
           </motion.p>
           <motion.h1 id="hero-title" variants={item}>
-            Building, managing & <span>automating digital growth.</span>
+            I build the page <span>and the traffic behind it.</span>
           </motion.h1>
           <motion.i className="hero-rule" variants={item} />
           <motion.p className="hero-description" variants={item}>
-            I&apos;m Lucky—a digital builder working across Telegram communities, AI content automation, crypto ecosystems, paid advertising, landing pages and development.
-          </motion.p>
-          <motion.p className="hero-outcome" variants={item}>
-            I turn ideas into systems, communities into active audiences, and workflows into automation.
+            Lucky Meena — from Kota. I run AdsTele, ship landing pages for trading communities, and place Telegram ads that have to earn their keep.
           </motion.p>
           <motion.div className="hero-actions" variants={item}>
-            <Button href={personal.telegramUrl || '#contact'}>Work With Me</Button>
-            <Button href="#work" variant="secondary">View My Work</Button>
+            <Button href={personal.telegramUrl}>Talk on Telegram</Button>
+            <Button href="#work" variant="secondary">See live sites</Button>
           </motion.div>
           <motion.div className="hero-meta" variants={item}>
             <div>
               <Icon name="location" />
               <span>{personal.location}</span>
             </div>
-            <a href={personal.githubUrl} target="_blank" rel="noreferrer">
-              <Icon name="github" />
-              GitHub
+            <a href={personal.emailUrl}>
+              <Icon name="mail" />
+              {personal.email}
             </a>
           </motion.div>
         </motion.div>
@@ -59,7 +56,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.12, ease: 'easeOut' }}
         >
-          <Portrait src={personal.photos.portrait} alt={`${personal.name} portrait`} caption={`${personal.name} · ${personal.location}`} />
+          <Portrait src={personal.photos.portrait} alt={`${personal.name} portrait`} caption={`${personal.name} · Kota`} />
         </motion.div>
         <motion.div
           className="trust-strip"

@@ -9,18 +9,20 @@ export function Journey() {
       <BackgroundEnvironment variant="pearl" />
       <div className="page-shell">
         <SectionHeading
+          headingId="journey-heading"
           number="03"
           eyebrow="My journey"
-          title="From ideas to"
-          accent="real digital projects."
-          description="I learned by building—not only by watching."
+          title="From Kota to"
+          accent="live digital work."
+          description="The path is simple: learn, ship a site, run the ads, repeat."
         />
         <div className="journey-board">
           <Reveal className="journey-intro">
-            <p>Every community, workflow, website and experiment added another useful skill to the toolkit. Some ideas worked. Some failed. All of them taught me how to build better.</p>
+            <p>I did not wait for a perfect plan. AdsTele, Jiga Bhai VIP and Trader X went live. Telegram ads are running. Each one taught the next system.</p>
           </Reveal>
           <Reveal className="journey-visual">
             <img src={personal.photos.journey} alt="Lucky Meena" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+            <p className="journey-caption mono">Lucky Meena · Kota, Rajasthan</p>
           </Reveal>
         </div>
         <div className="journey-track">
