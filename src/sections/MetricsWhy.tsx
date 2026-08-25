@@ -9,6 +9,7 @@ export function MetricsWhy() {
       <BackgroundEnvironment variant="sky" />
       <div className="page-shell">
         <SectionHeading
+          headingId="proof-heading"
           number="05"
           eyebrow="Built through action"
           title="Experience you can"

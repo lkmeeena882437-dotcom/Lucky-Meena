@@ -15,6 +15,7 @@ export function Work() {
       <BackgroundEnvironment variant="violet" />
       <div className="page-shell">
         <SectionHeading
+          headingId="work-heading"
           number="04"
           eyebrow="Selected work & experiments"
           title="Work explained as"
@@ -42,7 +43,7 @@ export function Work() {
               </Reveal>
             ))}
           </div>
-          <div className="case-stage">
+          <div className="case-stage" id="case-stage">
             <AnimatePresence mode="wait">
               <motion.article
                 className="case-study"
@@ -87,7 +88,7 @@ export function Work() {
             </AnimatePresence>
           </div>
         </div>
-        <a className="work-explore" href={personal.githubUrl} target="_blank" rel="noreferrer">
+        <a className="work-explore" href={personal.githubUrl} target="_blank" rel="noopener noreferrer">
           Explore projects on GitHub <Icon name="arrow" />
         </a>
       </div>

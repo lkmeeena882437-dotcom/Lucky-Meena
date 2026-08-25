@@ -19,6 +19,7 @@ export const personal = {
   photos: {
     portrait: 'https://i.ibb.co/QFjqM6B7/a8846785-66c3-4095-a893-2c9cb543f070.png',
     profile: 'https://i.ibb.co/Gf9ZB7BD/07b83b50-2215-4edb-9e17-4634814947ac.png',
+    journey: 'https://i.ibb.co/sp6RNT4r/84901198-3267-4c15-80cb-5a91d93cd647.png',
   },
 } as const;
 

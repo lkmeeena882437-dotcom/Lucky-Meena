@@ -8,11 +8,11 @@ export function About() {
     <section className="about-section section" id="about" aria-labelledby="about-heading">
       <BackgroundEnvironment variant="pearl" />
       <div className="page-shell">
-        <SectionHeading number="01" eyebrow="Who am I?" title="More than just" accent="one skill." />
+        <SectionHeading headingId="about-heading" number="01" eyebrow="Who am I?" title="More than just" accent="one skill." />
         <div className="about-grid">
           <Reveal className="identity-card">
             <div className="identity-photo">
-              <img src={personal.photos.profile} alt={personal.name} referrerPolicy="no-referrer" />
+              <img src={personal.photos.profile} alt={personal.name} referrerPolicy="no-referrer" loading="lazy" decoding="async" />
             </div>
             <div className="identity-body">
               <div className="identity-top">

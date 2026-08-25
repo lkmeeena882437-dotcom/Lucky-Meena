@@ -49,7 +49,7 @@ export function Contact() {
       <div className="page-shell final-cta">
         <Reveal className="contact-copy">
           <div className="contact-person">
-            <img src={personal.photos.profile} alt="" referrerPolicy="no-referrer" />
+            <img src={personal.photos.profile} alt="" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
             <div className="contact-label mono">
               <i />
               OPEN TO DIGITAL OPPORTUNITIES

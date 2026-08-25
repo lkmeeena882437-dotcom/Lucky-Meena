@@ -10,6 +10,7 @@ export function Skills() {
       <BackgroundEnvironment variant="sky" />
       <div className="page-shell">
         <SectionHeading
+          headingId="services-heading"
           number="02"
           eyebrow="What I do"
           title="My digital"

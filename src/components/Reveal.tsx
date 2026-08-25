@@ -18,7 +18,7 @@ export function Reveal({ children, className = '', delay = 0, as = 'div' }: { ch
   );
 }
 
-export function SectionHeading({ number, eyebrow, title, accent, description, dark = false }: { number: string; eyebrow: string; title: string; accent: string; description?: string; dark?: boolean }) {
+export function SectionHeading({ number, eyebrow, title, accent, description, dark = false, headingId }: { number: string; eyebrow: string; title: string; accent: string; description?: string; dark?: boolean; headingId?: string }) {
   return (
     <div className={`section-heading ${dark ? 'heading-dark' : ''}`}>
       <Reveal className="section-label">
@@ -29,7 +29,7 @@ export function SectionHeading({ number, eyebrow, title, accent, description, da
         <span className="rule" />
       </Reveal>
       <Reveal className="heading-copy" delay={0.06}>
-        <h2>
+        <h2 id={headingId}>
           {title} <em>{accent}</em>
         </h2>
         {description && <p>{description}</p>}
