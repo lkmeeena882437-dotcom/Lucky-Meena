@@ -16,6 +16,10 @@ export const personal = {
   instagramUrl: '',
   xUrl: '',
   contactEndpoint: '',
+  photos: {
+    portrait: 'https://i.ibb.co/QFjqM6B7/a8846785-66c3-4095-a893-2c9cb543f070.png',
+    profile: 'https://i.ibb.co/Gf9ZB7BD/07b83b50-2215-4edb-9e17-4634814947ac.png',
+  },
 } as const;
 
 export const navItems = [

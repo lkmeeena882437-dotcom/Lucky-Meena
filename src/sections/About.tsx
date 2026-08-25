@@ -11,30 +11,30 @@ export function About() {
         <SectionHeading number="01" eyebrow="Who am I?" title="More than just" accent="one skill." />
         <div className="about-grid">
           <Reveal className="identity-card">
-            <div className="identity-top">
-              <span className="identity-mark">LM</span>
-              <span className="identity-status">
-                <i />
-                Open to work
-              </span>
+            <div className="identity-photo">
+              <img src={personal.photos.profile} alt={personal.name} referrerPolicy="no-referrer" />
             </div>
-            <div className="identity-copy">
-              <p className="mono">INTRODUCTION</p>
-              <h3>{personal.name}</h3>
-              <span>{personal.nativeName}</span>
-              <strong>{personal.role}</strong>
-            </div>
-            <div className="identity-bottom">
-              <span>
-                <Icon name="location" />
-                {personal.location}
-              </span>
-              <small className="mono">BUILDING ACROSS COMMUNITY · AI · WEB</small>
-            </div>
-            <div className="identity-rings" aria-hidden="true">
-              <i />
-              <i />
-              <i />
+            <div className="identity-body">
+              <div className="identity-top">
+                <span className="identity-mark">LM</span>
+                <span className="identity-status">
+                  <i />
+                  Open to work
+                </span>
+              </div>
+              <div className="identity-copy">
+                <p className="mono">INTRODUCTION</p>
+                <h3>{personal.name}</h3>
+                <span>{personal.nativeName}</span>
+                <strong>{personal.role}</strong>
+              </div>
+              <div className="identity-bottom">
+                <span>
+                  <Icon name="location" />
+                  {personal.location}
+                </span>
+                <small className="mono">BUILDING ACROSS COMMUNITY · AI · WEB</small>
+              </div>
             </div>
           </Reveal>
           <div className="about-copy">

@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { BackgroundEnvironment } from '../components/BackgroundEnvironment';
 import { Button } from '../components/Button';
-import { HeroMonogram } from '../components/HeroMonogram';
+import { Portrait } from '../components/Portrait';
 import { Icon } from '../components/Icons';
 import { personal } from '../data/portfolio';
 
@@ -21,9 +21,6 @@ export function Hero() {
           animate="show"
           variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
         >
-          <motion.div className="hero-visual-wrap" variants={item}>
-            <HeroMonogram />
-          </motion.div>
           <motion.div className="availability-label" variants={item}>
             <i />
             <span>{personal.availability}</span>
@@ -55,6 +52,14 @@ export function Hero() {
               GitHub
             </a>
           </motion.div>
+        </motion.div>
+        <motion.div
+          className="hero-visual-wrap"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.12, ease: 'easeOut' }}
+        >
+          <Portrait src={personal.photos.portrait} alt={`${personal.name} portrait`} caption={`${personal.name} · ${personal.location}`} />
         </motion.div>
         <motion.div
           className="trust-strip"

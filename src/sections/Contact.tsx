@@ -48,9 +48,12 @@ export function Contact() {
       <BackgroundEnvironment variant="cosmic" />
       <div className="page-shell final-cta">
         <Reveal className="contact-copy">
-          <div className="contact-label mono">
-            <i />
-            OPEN TO DIGITAL OPPORTUNITIES
+          <div className="contact-person">
+            <img src={personal.photos.profile} alt="" referrerPolicy="no-referrer" />
+            <div className="contact-label mono">
+              <i />
+              OPEN TO DIGITAL OPPORTUNITIES
+            </div>
           </div>
           <h2 id="contact-heading">
             Have an idea?
