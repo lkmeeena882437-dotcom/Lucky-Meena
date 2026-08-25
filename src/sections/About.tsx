@@ -23,7 +23,7 @@ export function About() {
               </div>
               <div className="identity-copy">
                 <h3>{personal.name}</h3>
-                <span>{personal.nativeName}</span>
+                <span>{personal.role}</span>
                 <strong>{personal.location}</strong>
               </div>
               <div className="identity-bottom">

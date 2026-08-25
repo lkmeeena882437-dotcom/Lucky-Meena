@@ -1,6 +1,6 @@
 # Lucky Meena — Personal Portfolio
 
-A production-ready single-page portfolio for **Lucky Meena (लक्की मीणा)** covering Telegram management, AI content automation, crypto operations, Telegram ads, landing pages and development.
+A production-ready single-page portfolio for **Lucky Meena** covering Telegram management, ads, communities, landing pages and development.
 
 The visual language is an editorial serif system: Playfair Display headlines, Source Sans 3 body copy, IBM Plex Mono labels, ivory surfaces and a single burnished-gold accent.
 

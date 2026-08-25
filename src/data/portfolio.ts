@@ -1,6 +1,6 @@
 export const personal = {
   name: 'Lucky Meena',
-  nativeName: 'लक्की मीणा',
+  nativeName: 'Lucky Meena',
   monogram: 'LM',
   role: 'Telegram Operator · Ads · Community · Web',
   location: 'Kota, Rajasthan, India',
@@ -96,11 +96,11 @@ export const services = [
 ] as const;
 
 export const journey = [
-  { number: '01', phase: 'Roots', text: 'Kota se shuru. Tools seekhe, Telegram rooms dekhe, aur yeh samajh aaya ki log actually kahan tap karte hain.', icon: 'cursor' },
-  { number: '02', phase: 'Craft', text: 'AdsTele, Jiga Bhai VIP aur Trader X live kiye. Slide nahi — open web. Lucky ka naam un pages ke peeche hai.', icon: 'code' },
-  { number: '03', phase: 'Rooms', text: 'Trading rooms aur brand communities daily chalaye. Noise kam, rhythm zyada — members ko kaam ka content.', icon: 'message' },
-  { number: '04', phase: 'Fire', text: 'Telegram ads, Meta aur Google — page banane ke baad spend bhi khud chalaya, taaki offer rukhe nahi.', icon: 'analytics' },
-  { number: '05', phase: 'Now', text: 'Poora Telegram desk Kota se: ads, community, trading, web. Serious kaam ke liye open.', icon: 'arrow' },
+  { number: '01', phase: 'Roots', text: 'Started in Kota. Learned the tools, studied Telegram rooms, and figured out where people actually tap.', icon: 'cursor' },
+  { number: '02', phase: 'Craft', text: 'Shipped AdsTele, Jiga Bhai VIP and Trader X. Live on the open web — not a slide deck.', icon: 'code' },
+  { number: '03', phase: 'Rooms', text: 'Ran trading rooms and brand communities every day. Less noise, more rhythm, content members can use.', icon: 'message' },
+  { number: '04', phase: 'Fire', text: 'Added Telegram, Meta and Google ads after the page so the offer keeps moving.', icon: 'analytics' },
+  { number: '05', phase: 'Now', text: 'The full Telegram desk from Kota: ads, community, trading, web. Open for serious work.', icon: 'arrow' },
 ] as const;
 
 export const work = [

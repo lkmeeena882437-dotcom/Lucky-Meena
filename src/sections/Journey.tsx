@@ -14,11 +14,11 @@ export function Journey() {
           eyebrow="My journey"
           title="Kota to live systems."
           accent=""
-          description="Kota se live systems tak — meri asli line."
+          description="From Kota to live systems — the real line."
         />
         <div className="journey-board">
           <Reveal className="journey-intro">
-            <p>Main Lucky Meena hoon. Kota se. Telegram ads, communities, trading rooms aur websites — yeh desk maine khud banaya. AdsTele, Jiga Bhai VIP aur Trader X usi raaste ke nishaan hain.</p>
+            <p>I am Lucky Meena, from Kota. I built this desk myself: Telegram ads, communities, trading rooms and websites. AdsTele, Jiga Bhai VIP and Trader X are the marks on that path.</p>
           </Reveal>
           <Reveal className="journey-visual">
             <img src={personal.photos.journey} alt="Lucky Meena" referrerPolicy="no-referrer" loading="lazy" decoding="async" />
