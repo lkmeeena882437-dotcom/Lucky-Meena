@@ -44,9 +44,9 @@ export function Hero() {
               <Icon name="location" />
               <span>{personal.location}</span>
             </div>
-            <a href={personal.telegramUrl}>
-              <Icon name="message" />
-              {personal.telegram}
+            <a href={personal.instagramUrl} target="_blank" rel="noopener noreferrer">
+              <Icon name="spark" />
+              @lucky.groww
             </a>
           </motion.div>
         </motion.div>

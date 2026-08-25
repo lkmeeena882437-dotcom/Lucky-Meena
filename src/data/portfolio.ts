@@ -13,7 +13,7 @@ export const personal = {
   resumeUrl: '',
   githubUrl: 'https://github.com/lkmeeena882437-dotcom',
   linkedinUrl: '',
-  instagramUrl: '',
+  instagramUrl: 'https://www.instagram.com/lucky.groww/',
   xUrl: '',
   contactEndpoint: '',
   photos: {
@@ -96,11 +96,11 @@ export const services = [
 ] as const;
 
 export const journey = [
-  { number: '01', phase: 'Kota', text: 'Started in Kota — tools, Telegram rooms and how traffic actually moves.', icon: 'cursor' },
-  { number: '02', phase: 'Build', text: 'Shipped AdsTele, Jiga Bhai VIP and Gujarati Trader X.', icon: 'code' },
-  { number: '03', phase: 'Rooms', text: 'Took on community ops, trading rooms and daily Telegram work.', icon: 'message' },
-  { number: '04', phase: 'Ads', text: 'Added Telegram, Meta and Google campaigns on top of the pages.', icon: 'analytics' },
-  { number: '05', phase: 'Now', text: 'Full Telegram desk — ads, community, trading, web. Open for work.', icon: 'arrow' },
+  { number: '01', phase: 'Roots', text: 'Kota se shuru. Tools seekhe, Telegram rooms dekhe, aur yeh samajh aaya ki log actually kahan tap karte hain.', icon: 'cursor' },
+  { number: '02', phase: 'Craft', text: 'AdsTele, Jiga Bhai VIP aur Trader X live kiye. Slide nahi — open web. Lucky ka naam un pages ke peeche hai.', icon: 'code' },
+  { number: '03', phase: 'Rooms', text: 'Trading rooms aur brand communities daily chalaye. Noise kam, rhythm zyada — members ko kaam ka content.', icon: 'message' },
+  { number: '04', phase: 'Fire', text: 'Telegram ads, Meta aur Google — page banane ke baad spend bhi khud chalaya, taaki offer rukhe nahi.', icon: 'analytics' },
+  { number: '05', phase: 'Now', text: 'Poora Telegram desk Kota se: ads, community, trading, web. Serious kaam ke liye open.', icon: 'arrow' },
 ] as const;
 
 export const work = [

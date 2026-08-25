@@ -21,7 +21,7 @@ export function Footer() {
           <BrandLogo light />
           <div className="footer-position">
             <strong>LUCKY</strong>
-            <span>Digital Builder · Community Manager · AI Automation</span>
+            <span>Telegram desk · Ads · Community · Web</span>
           </div>
           <a className="footer-top" href="#home">
             Back to top <Icon name="arrow" />
@@ -30,7 +30,7 @@ export function Footer() {
         {liveSocials.length > 0 && (
           <div className="footer-socials">
             {liveSocials.map(([label, url]) => (
-              <a href={url} target="_blank" rel="noreferrer" key={label}>
+              <a href={url} target="_blank" rel="noopener noreferrer" key={label}>
                 {label}
               </a>
             ))}

@@ -48,7 +48,7 @@ export function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <nav className="nav-inner" aria-label="Main navigation">
-        <BrandLogo />
+        <BrandLogo light />
         <div className="desktop-nav">
           {navItems.map((item) => (
             <a className={active === item.href.slice(1) ? 'active' : ''} href={item.href} key={item.href}>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Lenis from 'lenis';
+import { SiteAtmosphere } from './components/SiteAtmosphere';
 import { Navbar } from './components/Navbar';
 import { MobileStickyCTA } from './components/MobileStickyCTA';
 import { Hero } from './sections/Hero';
@@ -33,6 +34,7 @@ function App() {
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
+      <SiteAtmosphere />
       <Navbar />
       <main id="main">
         <Hero />
