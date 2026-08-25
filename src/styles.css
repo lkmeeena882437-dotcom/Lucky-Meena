@@ -469,7 +469,6 @@ svg {
 }
 
 .hero-grid {
-  width: 100%;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
@@ -544,16 +543,19 @@ svg {
 
 .availability-label {
   width: max-content;
+  max-width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 6px 10px;
   margin-bottom: 18px;
-  color: var(--accent-ink);
+  color: var(--accent-secondary);
   font-family: var(--mono);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(212, 168, 75, 0.4);
 }
 
 .availability-label i,
@@ -566,9 +568,10 @@ svg {
 
 .hero-role {
   margin: 0 0 22px;
-  color: rgba(246, 241, 232, 0.62);
+  color: rgba(246, 241, 232, 0.72);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
+  text-shadow: 0 0 14px rgba(184, 134, 11, 0.35);
 }
 
 .hero-copy {
@@ -583,12 +586,13 @@ svg {
   line-height: 1.12;
   letter-spacing: -0.02em;
   color: #f6f1e8;
-  text-shadow: none;
+  text-shadow: 0 2px 26px rgba(0, 0, 0, 0.45);
 }
 
 .hero-copy h1 span {
   font-style: italic;
-  color: var(--accent);
+  color: var(--accent-secondary);
+  text-shadow: 0 0 22px rgba(212, 168, 75, 0.45);
 }
 
 .hero-rule {
@@ -602,9 +606,10 @@ svg {
 .hero-description {
   max-width: 38rem;
   margin: 28px 0 0;
-  color: rgba(246, 241, 232, 0.78);
+  color: rgba(246, 241, 232, 0.86);
   font-size: 1.05rem;
   line-height: 1.75;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.35);
 }
 
 .hero-outcome {
@@ -770,6 +775,7 @@ svg {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
+  text-shadow: 0 0 14px rgba(212, 168, 75, 0.38);
 }
 
 .heading-copy h2 {
@@ -780,11 +786,13 @@ svg {
   line-height: 1.18;
   letter-spacing: -0.015em;
   color: #f6f1e8;
+  text-shadow: 0 1px 20px rgba(0, 0, 0, 0.35);
 }
 
 .heading-copy h2 em {
-  color: var(--accent);
+  color: var(--accent-secondary);
   font-style: italic;
+  text-shadow: 0 0 20px rgba(212, 168, 75, 0.42);
 }
 
 .heading-copy > p {
@@ -954,6 +962,7 @@ svg {
   line-height: 1.25;
   letter-spacing: -0.01em;
   color: #f6f1e8;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.38);
 }
 
 .about-copy > div:nth-child(2) > p {
@@ -2205,8 +2214,9 @@ svg {
 
 .contact-copy h2 span {
   display: block;
-  color: var(--accent);
+  color: var(--accent-secondary);
   font-style: italic;
+  text-shadow: 0 0 20px rgba(212, 168, 75, 0.42);
 }
 
 .contact-copy > p {
@@ -2509,10 +2519,10 @@ svg {
   :root { --shell: min(100vw - 40px, 880px); }
 
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .hero-visual-wrap { max-width: 22rem; margin: 0; }
+  .hero-visual-wrap { max-width: 19rem; margin: 0; }
   .portrait-mat img { aspect-ratio: 4 / 5; }
 
-  .identity-card { max-width: 26rem; }
+  .identity-card { max-width: 24rem; }
 
   .services-grid,
   .reasons-grid { grid-template-columns: 1fr; }
@@ -2607,36 +2617,23 @@ svg {
   .final-cta,
   .contact-grid { grid-template-columns: 1fr; }
 
-  .services-grid { grid-template-columns: 1fr; }
+  .hero-visual-wrap { max-width: 16.5rem; }
 
-  .metrics-row,
-  .reasons-grid { grid-template-columns: 1fr; }
+  .identity-card { max-width: 22rem; }
 
-  .metric-card {
-    border-right: 0;
-    border-top: 1px solid rgba(232, 228, 223, 0.16);
+  .service-card { min-height: 0; padding: 1.6rem; }
+
+  .journey-visual { max-width: 22rem; }
+
+  .journey-visual img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
   }
 
-  .metric-card:first-child { border-top: 0; }
+  .case-visual,
+  .case-content { min-height: 280px; }
 
-  .footer-main { grid-template-columns: 1fr auto; }
-  .footer-position { display: none; }
-}
-
-@media (max-width: 520px) {
-  :root { --shell: calc(100vw - 28px); }
-
-  .section { padding: 5rem 0; }
-  .brand-logo small { display: none; }
-  .hero-actions { display: grid; width: 100%; }
-  .button { width: 100%; }
-  .hero-meta { display: grid; gap: 10px; }
-  .trust-strip { justify-content: flex-start; }
-  .heading-copy h2 { font-size: 2rem; max-width: none; }
-
-  .identity-card { min-height: 0; padding: 0; }
-  .identity-photo { aspect-ratio: 1 / 1; }
-  .about-lead { font-size: 1.55rem; }
+  .contact-actions { grid-template-columns: 1fr; }
 
   .journey-track {
     grid-template-columns: 1fr;
@@ -2662,6 +2659,47 @@ svg {
     bottom: -14px;
     transform: rotate(90deg);
   }
+
+  .services-grid { grid-template-columns: 1fr; }
+
+  .metrics-row,
+  .reasons-grid { grid-template-columns: 1fr; }
+
+  .metric-card {
+    border-right: 0;
+    border-top: 1px solid rgba(232, 228, 223, 0.16);
+  }
+
+  .metric-card:first-child { border-top: 0; }
+
+  .footer-main { grid-template-columns: 1fr auto; }
+  .footer-position { display: none; }
+}
+
+@media (max-width: 520px) {
+  :root { --shell: calc(100vw - 28px); }
+
+  body { font-size: 16px; }
+
+  .section { padding: 4.5rem 0; }
+  .brand-logo small { display: none; }
+  .hero-actions { display: grid; width: 100%; }
+  .button { width: 100%; }
+  .hero-meta { display: grid; gap: 10px; }
+  .trust-strip { justify-content: flex-start; }
+  .heading-copy h2 { font-size: clamp(1.65rem, 7.4vw, 2rem); max-width: none; }
+
+  .identity-card { min-height: 0; padding: 0; }
+  .identity-photo { aspect-ratio: 1 / 1; }
+  .identity-copy h3 { font-size: clamp(1.7rem, 7vw, 2.1rem); }
+  .about-lead { font-size: clamp(1.3rem, 5.8vw, 1.55rem); }
+  .contact-copy h2 { font-size: clamp(1.8rem, 7.6vw, 2.4rem); }
+  .why-heading h3 { font-size: 1.6rem; }
+
+  .case-visual,
+  .case-content { min-height: 240px; }
+
+  .portrait-mat img { aspect-ratio: 1 / 1; }
 
   .case-study { grid-template-columns: 1fr; }
   .console-grid { grid-template-columns: 38px 1fr; }
