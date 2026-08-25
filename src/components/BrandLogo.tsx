@@ -8,7 +8,7 @@ export function BrandLogo({ light = false }: { light?: boolean }) {
       </span>
       <span>
         <strong>Lucky Meena</strong>
-        <small>Digital systems & growth</small>
+        <small>Telegram desk</small>
       </span>
     </a>
   );

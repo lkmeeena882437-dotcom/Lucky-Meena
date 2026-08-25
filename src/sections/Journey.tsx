@@ -12,13 +12,13 @@ export function Journey() {
           headingId="journey-heading"
           number="03"
           eyebrow="My journey"
-          title="From Kota to"
-          accent="live digital work."
-          description="The path is simple: learn, ship a site, run the ads, repeat."
+          title="Kota to live systems."
+          accent=""
+          description="Build the page. Fill the room. Run the ads."
         />
         <div className="journey-board">
           <Reveal className="journey-intro">
-            <p>I did not wait for a perfect plan. AdsTele, Jiga Bhai VIP and Trader X went live. Telegram ads are running. Each one taught the next system.</p>
+            <p>AdsTele, Jiga Bhai VIP and Trader X went live. Telegram rooms and ads are running. The desk got wider — ads, community, trading, web.</p>
           </Reveal>
           <Reveal className="journey-visual">
             <img src={personal.photos.journey} alt="Lucky Meena" referrerPolicy="no-referrer" loading="lazy" decoding="async" />

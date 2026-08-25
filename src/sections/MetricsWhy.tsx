@@ -12,9 +12,9 @@ export function MetricsWhy() {
           headingId="proof-heading"
           number="05"
           eyebrow="Plain facts"
-          title="No padded"
-          accent="numbers."
-          description="What is true today: three live sites, six skill areas, based in Kota, open for work."
+          title="Plain facts."
+          accent="Real output."
+          description="Live sites, launched campaigns and AdsTele ROAS — from the desk that ships."
         />
         <div className="metrics-row">
           {metrics.map((metric, index) => (

@@ -18,9 +18,9 @@ export function Work() {
           headingId="work-heading"
           number="04"
           eyebrow="Live work"
-          title="Sites you can"
-          accent="open right now."
-          description="Three live websites and running Telegram ads. No invented case studies."
+          title="Open the work."
+          accent="It’s live."
+          description="Agency. Trading community. Telegram funnel. Running desk."
         />
         <div className="case-layout">
           <div className="case-list">
@@ -37,7 +37,7 @@ export function Work() {
                   <div>
                     <small className="mono">{project.category}</small>
                     <strong>{project.title}</strong>
-                    <em>{project.url ? 'Open live site' : 'Running campaign'}</em>
+                    <em>{project.impact}</em>
                   </div>
                   <Icon name={active === index ? 'close' : 'arrow'} />
                 </button>
@@ -55,7 +55,7 @@ export function Work() {
                 transition={{ duration: 0.2, ease: 'easeOut' }}
               >
                 <div className="case-visual">
-                  <ProjectVisual type={current.visual} />
+                  <ProjectVisual src={current.cover} title={current.title} />
                   <span className="case-status mono">
                     <i />
                     {current.status}
@@ -86,11 +86,11 @@ export function Work() {
                   </div>
                   {current.url ? (
                     <a className="case-link" href={current.url} target="_blank" rel="noopener noreferrer">
-                      Visit live site <Icon name="arrow" />
+                      Open live site <Icon name="arrow" />
                     </a>
                   ) : (
                     <a className="case-link" href={personal.telegramUrl}>
-                      Ask for campaign screenshots <Icon name="arrow" />
+                      Ask for campaign proof <Icon name="arrow" />
                     </a>
                   )}
                 </div>
@@ -98,9 +98,6 @@ export function Work() {
             </AnimatePresence>
           </div>
         </div>
-        <a className="work-explore" href={personal.githubUrl} target="_blank" rel="noopener noreferrer">
-          Also on GitHub <Icon name="arrow" />
-        </a>
       </div>
     </section>
   );

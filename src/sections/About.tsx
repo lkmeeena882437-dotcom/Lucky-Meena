@@ -8,7 +8,7 @@ export function About() {
     <section className="about-section section" id="about" aria-labelledby="about-heading">
       <BackgroundEnvironment variant="pearl" />
       <div className="page-shell">
-        <SectionHeading headingId="about-heading" number="01" eyebrow="Who am I?" title="Built from" accent="Kota. Shipped live." />
+        <SectionHeading headingId="about-heading" number="01" eyebrow="Who I am" title="One operator." accent="Full stack." />
         <div className="about-grid">
           <Reveal className="identity-card">
             <div className="identity-photo">
@@ -36,24 +36,26 @@ export function About() {
           </Reveal>
           <div className="about-copy">
             <Reveal>
-              <p className="about-lead">I run AdsTele and I build the pages that catch the traffic.</p>
+              <p className="about-lead">I run the Telegram desk — ads, rooms, trading and the page.</p>
             </Reveal>
             <Reveal delay={0.05}>
-              <p>From Kota I handle Telegram communities, landing pages and paid ads as one job — not three vendors. Jiga Bhai VIP, Gujarati Trader X and AdsTele are live. Telegram campaigns are running; screenshots on request.</p>
+              <p>Not only Telegram ads. Community management, trading rooms, landing pages and websites sit on the same desk. AdsTele, Jiga Bhai VIP and Trader X are live. Campaigns are running.</p>
             </Reveal>
             <Reveal className="about-method" delay={0.08}>
-              <span className="mono">HOW I WORK</span>
+              <span className="mono">THE DESK</span>
               <div>
-                <strong>Page</strong>
-                <i>→</i>
-                <strong>Traffic</strong>
+                <strong>Ads</strong>
                 <i>→</i>
                 <strong>Community</strong>
+                <i>→</i>
+                <strong>Trading</strong>
+                <i>→</i>
+                <strong>Web</strong>
               </div>
             </Reveal>
             <Reveal className="about-statement" delay={0.12}>
               <Icon name="spark" />
-              <strong>If the offer is clear, I can build the site and put it in front of people.</strong>
+              <strong>If it lives on Telegram, I can run it — and I can build the page that feeds it.</strong>
             </Reveal>
           </div>
         </div>

@@ -13,9 +13,9 @@ export function Skills() {
           headingId="services-heading"
           number="02"
           eyebrow="What I do"
-          title="The work I"
-          accent="actually take."
-          description="Six services, tied to live sites and running campaigns — not a generic stack."
+          title="The Telegram desk."
+          accent="All of it."
+          description="Ads, community, trading rooms, landers and websites — one operator."
         />
         <div className="services-grid">
           {services.map((service, index) => (

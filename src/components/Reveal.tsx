@@ -30,7 +30,8 @@ export function SectionHeading({ number, eyebrow, title, accent, description, da
       </Reveal>
       <Reveal className="heading-copy" delay={0.06}>
         <h2 id={headingId}>
-          {title} <em>{accent}</em>
+          {title}
+          {accent ? <> <em>{accent}</em></> : null}
         </h2>
         {description && <p>{description}</p>}
       </Reveal>

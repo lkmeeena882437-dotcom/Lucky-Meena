@@ -57,7 +57,7 @@ export function Contact() {
           </div>
           <h2 id="contact-heading">
             Have an idea?
-            <span>Let&apos;s turn it into something real.</span>
+            <span>Bring the Telegram work.</span>
           </h2>
           <p>Telegram, a landing page, AdsTele work, or a campaign that needs a real operator — write here or message me directly.</p>
           <div className="contact-actions">
